@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRISPR Efficiency Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">CRISPRed</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#predict">Predict</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>CRISPR Efficiency Prediction</h1>
+            <p>Advanced machine learning-powered tool for predicting CRISPR-Cas9 cutting efficiency</p>
+            <a href="#predict" class="cta-button">Start Prediction</a>
+        </div>
+        <div class="hero-image">
+            <img src="dna.jpeg" height="400px" width="600px" alt="DNA Structure">
+        </div>
+    </section>
+
+    <section id="predict" class="prediction-section">
+        <div class="container">
+            <h2>Predict Cutting Efficiency</h2>
+            <div class="prediction-form">
+                <form id="predictionForm">
+                    <div class="form-group">
+                        <label for="mrnaSequence">mRNA Sequence</label>
+                        <textarea id="mrnaSequence" placeholder="Enter 30mer sequence" required></textarea>
+                        <div class="sequence-validator">
+                            <span class="length-indicator">0/30</span>
+                            <span class="validation-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="targetGene">Target Gene</label>
+                        <select id="targetGene" required>
+                            <option value="">Select Target Gene</option>
+                            <option value="CD13">CD13</option>
+                            <option value="CD33">CD33</option>
+                            <option value="CD15">CD15</option>
+                            <option value="CD28">CD28</option>
+                            <option value="CCDC101">CCDC101</option>
+                            <option value="CD45">CD45</option>
+                            <option value="CD5">CD5</option>
+                            <option value="CUL3">CUL3</option>
+                            <option value="H2-K">H2-K</option>
+                            <option value="HPRT1">HPRT1</option>
+                            <option value="MED12">MED12</option>
+                            <option value="NF1">NF1</option>
+                            <option value="NF2">NF2</option>
+                            <option value="TADA1">TADA1</option>
+                            <option value="TADA2B">TADA2B</option>
+                            <option value="THY1">THY1</option>
+                            <option value="CD43">CD43</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cutPosition">Cut Position</label>
+                        <input type="number" id="cutPosition" min="1" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Predict Efficiency</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="results-container" style="display: none;">
+                <h3>Prediction Results</h3>
+                <div class="efficiency-score">
+                    <div class="score-circle">
+                        <span class="score-value">1</span>
+                        <span class="score-label">Efficiency Score</span>
+                    </div>
+                </div>
+                <div class="sequence-visualization">
+                    <!-- Sequence visualization will be added here -->
+                </div>
+                <div class="results-content"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About the Project</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>This tool uses advanced machine learning techniques to predict the cutting efficiency of CRISPR-Cas9 systems. Our random forest model has been trained on synthetic data to provide accurate predictions for your gene editing experiments.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-dna"></i>
+                            <h3>Sequence Analysis</h3>
+                            <p>Analyze mRNA sequences and target genes</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-robot"></i>
+                            <h3>ML Powered</h3>
+                            <p>Random Forest regression for accurate predictions</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Efficiency Scoring</h3>
+                            <p>Get detailed efficiency predictions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
