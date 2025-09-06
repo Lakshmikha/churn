@@ -13,7 +13,7 @@ sentiment-related features, thereby enabling proactive customer retention strate
 addition, it seeks to predict loan default based on customer profiles and financial behavior
 to support better credit risk assessment.
 
-This repository contains all my contributions to the project. 
+This repository contains all my contributions to the project - https://github.com/karthika-shankar/bank_churnanalysis_tcs
 <br>
 <br>
 <br>
